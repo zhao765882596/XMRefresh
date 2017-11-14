@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XMRefresh_Example' do
+  pod 'XMRefresh', :path => '../'
+
+  target 'XMRefresh_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

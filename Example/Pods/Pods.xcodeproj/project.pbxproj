@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08E06D50AA91A046EBCA23318E654248 /* Pods-XMRefresh_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F23F3858E46DCFFAFF0B2623C3CB784 /* Pods-XMRefresh_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A65FFEB989B91C6B151B460E76990A3 /* Pods-XMRefresh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F75044219EBE5CD0A35F0B008713730 /* Pods-XMRefresh_Example-dummy.m */; };
+		31D6100EA340699090F48AE04A722576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3A74EDB31FBB05010020C2AB /* UIView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9B1FBB05010020C2AB /* UIView_Refresh.swift */; };
+		3A74EDB41FBB05010020C2AB /* UIView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9B1FBB05010020C2AB /* UIView_Refresh.swift */; };
+		3A74EDB51FBB05010020C2AB /* XMRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9D1FBB05010020C2AB /* XMRefreshHeader.swift */; };
+		3A74EDB61FBB05010020C2AB /* XMRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9D1FBB05010020C2AB /* XMRefreshHeader.swift */; };
+		3A74EDB71FBB05010020C2AB /* XMRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9E1FBB05010020C2AB /* XMRefreshComponent.swift */; };
+		3A74EDB81FBB05010020C2AB /* XMRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9E1FBB05010020C2AB /* XMRefreshComponent.swift */; };
+		3A74EDB91FBB05010020C2AB /* XMRefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9F1FBB05010020C2AB /* XMRefreshAutoFooter.swift */; };
+		3A74EDBA1FBB05010020C2AB /* XMRefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74ED9F1FBB05010020C2AB /* XMRefreshAutoFooter.swift */; };
+		3A74EDBB1FBB05010020C2AB /* XMRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA01FBB05010020C2AB /* XMRefreshFooter.swift */; };
+		3A74EDBC1FBB05010020C2AB /* XMRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA01FBB05010020C2AB /* XMRefreshFooter.swift */; };
+		3A74EDBD1FBB05010020C2AB /* XMRefreshBackFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA11FBB05010020C2AB /* XMRefreshBackFooter.swift */; };
+		3A74EDBE1FBB05010020C2AB /* XMRefreshBackFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA11FBB05010020C2AB /* XMRefreshBackFooter.swift */; };
+		3A74EDBF1FBB05010020C2AB /* XMRefreshBackStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA51FBB05010020C2AB /* XMRefreshBackStateFooter.swift */; };
+		3A74EDC01FBB05010020C2AB /* XMRefreshBackStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA51FBB05010020C2AB /* XMRefreshBackStateFooter.swift */; };
+		3A74EDC11FBB05010020C2AB /* XMRefreshBackGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA61FBB05010020C2AB /* XMRefreshBackGifFooter.swift */; };
+		3A74EDC21FBB05010020C2AB /* XMRefreshBackGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA61FBB05010020C2AB /* XMRefreshBackGifFooter.swift */; };
+		3A74EDC31FBB05010020C2AB /* XMRefreshBackNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA71FBB05010020C2AB /* XMRefreshBackNormalFooter.swift */; };
+		3A74EDC41FBB05010020C2AB /* XMRefreshBackNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA71FBB05010020C2AB /* XMRefreshBackNormalFooter.swift */; };
+		3A74EDC51FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA91FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift */; };
+		3A74EDC61FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDA91FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift */; };
+		3A74EDC71FBB05010020C2AB /* XMRefreshAutoStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAA1FBB05010020C2AB /* XMRefreshAutoStateFooter.swift */; };
+		3A74EDC81FBB05010020C2AB /* XMRefreshAutoStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAA1FBB05010020C2AB /* XMRefreshAutoStateFooter.swift */; };
+		3A74EDC91FBB05010020C2AB /* XMRefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAB1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift */; };
+		3A74EDCA1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAB1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift */; };
+		3A74EDCB1FBB05010020C2AB /* XMRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAD1FBB05010020C2AB /* XMRefreshGifHeader.swift */; };
+		3A74EDCC1FBB05010020C2AB /* XMRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAD1FBB05010020C2AB /* XMRefreshGifHeader.swift */; };
+		3A74EDCD1FBB05010020C2AB /* XMRefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAE1FBB05010020C2AB /* XMRefreshStateHeader.swift */; };
+		3A74EDCE1FBB05010020C2AB /* XMRefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAE1FBB05010020C2AB /* XMRefreshStateHeader.swift */; };
+		3A74EDCF1FBB05010020C2AB /* XMRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAF1FBB05010020C2AB /* XMRefreshNormalHeader.swift */; };
+		3A74EDD01FBB05010020C2AB /* XMRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDAF1FBB05010020C2AB /* XMRefreshNormalHeader.swift */; };
+		3A74EDD11FBB05010020C2AB /* XMRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB01FBB05010020C2AB /* XMRefreshConst.swift */; };
+		3A74EDD21FBB05010020C2AB /* XMRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB01FBB05010020C2AB /* XMRefreshConst.swift */; };
+		3A74EDD31FBB05010020C2AB /* Bundle_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */; };
+		3A74EDD41FBB05010020C2AB /* Bundle_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */; };
+		3A74EDD51FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */; };
+		3A74EDD61FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */; };
+		5AD1E41F396BC80FE6A3D589D3F69098 /* XMRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCA616201698D37A71986F340D09721 /* XMRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77943C0654235FBF6B4C9AE7B7528EBB /* Pods-XMRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CF6FF83D8D2C7AC9C4341BEAACE209 /* Pods-XMRefresh_Tests-dummy.m */; };
+		7CE8D4F026AC472BDA81F137769E4936 /* Pods-XMRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E22D4BD610AB018314742419D1D02D /* Pods-XMRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E12D03ED02775A550FE9CCD22FA1F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9369C641D7B22EDC2E5CC25303759DC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EA7A390C65A7067E6FA19AA97965362C /* XMRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EBD36B6976771DC21C136E088655D2 /* XMRefresh-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3E4F204F03518505E8311BB772CEFC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D023FF3F50B41C861F257F120B890C54;
+			remoteInfo = XMRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20E22D4BD610AB018314742419D1D02D /* Pods-XMRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
+		27CF6FF83D8D2C7AC9C4341BEAACE209 /* Pods-XMRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		3A74ED9B1FBB05010020C2AB /* UIView_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView_Refresh.swift; path = XMRefresh/Classes/UIView_Refresh.swift; sourceTree = "<group>"; };
+		3A74ED9D1FBB05010020C2AB /* XMRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshHeader.swift; sourceTree = "<group>"; };
+		3A74ED9E1FBB05010020C2AB /* XMRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshComponent.swift; sourceTree = "<group>"; };
+		3A74ED9F1FBB05010020C2AB /* XMRefreshAutoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshAutoFooter.swift; sourceTree = "<group>"; };
+		3A74EDA01FBB05010020C2AB /* XMRefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshFooter.swift; sourceTree = "<group>"; };
+		3A74EDA11FBB05010020C2AB /* XMRefreshBackFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshBackFooter.swift; sourceTree = "<group>"; };
+		3A74EDA51FBB05010020C2AB /* XMRefreshBackStateFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshBackStateFooter.swift; sourceTree = "<group>"; };
+		3A74EDA61FBB05010020C2AB /* XMRefreshBackGifFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshBackGifFooter.swift; sourceTree = "<group>"; };
+		3A74EDA71FBB05010020C2AB /* XMRefreshBackNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshBackNormalFooter.swift; sourceTree = "<group>"; };
+		3A74EDA91FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshAutoNormalFooter.swift; sourceTree = "<group>"; };
+		3A74EDAA1FBB05010020C2AB /* XMRefreshAutoStateFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshAutoStateFooter.swift; sourceTree = "<group>"; };
+		3A74EDAB1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshAutoGifFooter.swift; sourceTree = "<group>"; };
+		3A74EDAD1FBB05010020C2AB /* XMRefreshGifHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshGifHeader.swift; sourceTree = "<group>"; };
+		3A74EDAE1FBB05010020C2AB /* XMRefreshStateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshStateHeader.swift; sourceTree = "<group>"; };
+		3A74EDAF1FBB05010020C2AB /* XMRefreshNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshNormalHeader.swift; sourceTree = "<group>"; };
+		3A74EDB01FBB05010020C2AB /* XMRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMRefreshConst.swift; path = XMRefresh/Classes/XMRefreshConst.swift; sourceTree = "<group>"; };
+		3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bundle_Refresh.swift; path = XMRefresh/Classes/Bundle_Refresh.swift; sourceTree = "<group>"; };
+		3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScrollView_Refresh.swift; path = XMRefresh/Classes/UIScrollView_Refresh.swift; sourceTree = "<group>"; };
+		3A74EDD71FBB05690020C2AB /* XMRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = XMRefresh.bundle; path = ../../../../XMRefresh/Assets/XMRefresh.bundle; sourceTree = "<group>"; };
+		43E5FC219273667F7064AA579FFF7DDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F58C9446BD6508B4234BCF42243A8D /* Pods-XMRefresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMRefresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		5BCA616201698D37A71986F340D09721 /* XMRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMRefresh-umbrella.h"; sourceTree = "<group>"; };
+		5F23F3858E46DCFFAFF0B2623C3CB784 /* Pods-XMRefresh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMRefresh_Example-umbrella.h"; sourceTree = "<group>"; };
+		5F75044219EBE5CD0A35F0B008713730 /* Pods-XMRefresh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMRefresh_Example-dummy.m"; sourceTree = "<group>"; };
+		628CA1DEC6C66E8AAE4F0C992B50AB39 /* Pods-XMRefresh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMRefresh_Example-resources.sh"; sourceTree = "<group>"; };
+		64B89798D288C1DD4774A7D75B1FC488 /* XMRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMRefresh-prefix.pch"; sourceTree = "<group>"; };
+		6533E2D36F1F824AFDF58F978EDC0BF3 /* Pods-XMRefresh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMRefresh_Tests-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67794FC0B6CC6E33E1C9811FB2993131 /* Pods-XMRefresh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMRefresh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		76EBD36B6976771DC21C136E088655D2 /* XMRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMRefresh-dummy.m"; sourceTree = "<group>"; };
+		76F2ACB7A0E94384F0588DA5EBDB4C8F /* Pods-XMRefresh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMRefresh_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		78A0C2F14DCF981705E70A71B6BD6EF3 /* Pods-XMRefresh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-XMRefresh_Tests.modulemap"; sourceTree = "<group>"; };
+		7CE4DD802BEE4B10F9FA19401B0789CD /* Pods-XMRefresh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMRefresh_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7FFAA96A43942CCA34F8C2C99F921249 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923625BA20CB88EABAE95B86FB0CF5C7 /* Pods_XMRefresh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMRefresh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F3F95320B9567900D72008E94FCC03F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B58087920B712112758BDFC0C865712A /* Pods-XMRefresh_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XMRefresh_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5E5991E2E3742545C18E7AED936E53D /* Pods-XMRefresh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMRefresh_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BEA6D5F5C1D1865AEA385AEA2326BD85 /* XMRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XMRefresh.modulemap; sourceTree = "<group>"; };
+		C31046A607C7BA56AD11A86E7BC74446 /* Pods-XMRefresh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XMRefresh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CCD92A26957177585641ACCF1ECB96FB /* Pods-XMRefresh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMRefresh_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DCB965D75BAF179A432E07894A269BE0 /* Pods-XMRefresh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMRefresh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDB7C5C9D12425FC149C26383CC24091 /* Pods_XMRefresh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMRefresh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4917AAA0DD86360F6199A9D34AE884 /* XMRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMRefresh.xcconfig; sourceTree = "<group>"; };
+		E36DE5CB0BDEBADCC20B340F117D47B7 /* XMRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E42B2EF1031928C615A31139C34C5FE2 /* Pods-XMRefresh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XMRefresh_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F899FB0AD559517E341CE548A41771AC /* Pods-XMRefresh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-XMRefresh_Example.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AC7B9A92423E1B3C8B80478BBFB1247 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E12D03ED02775A550FE9CCD22FA1F5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72663D603B7382507F6135A49409B2E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31D6100EA340699090F48AE04A722576 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96199F42C60CE77E689C6DFF6A839C43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9369C641D7B22EDC2E5CC25303759DC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CCBB739F228F27BDFD7F3429D01F344 /* XMRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				3A74ED9C1FBB05010020C2AB /* Base */,
+				3A74EDA21FBB05010020C2AB /* Custom */,
+				3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */,
+				3A74ED9B1FBB05010020C2AB /* UIView_Refresh.swift */,
+				3A74EDB01FBB05010020C2AB /* XMRefreshConst.swift */,
+				3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */,
+				2E96706EBB32967BE8035647041052FE /* Support Files */,
+			);
+			name = XMRefresh;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2E96706EBB32967BE8035647041052FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDD71FBB05690020C2AB /* XMRefresh.bundle */,
+				9F3F95320B9567900D72008E94FCC03F /* Info.plist */,
+				BEA6D5F5C1D1865AEA385AEA2326BD85 /* XMRefresh.modulemap */,
+				DF4917AAA0DD86360F6199A9D34AE884 /* XMRefresh.xcconfig */,
+				76EBD36B6976771DC21C136E088655D2 /* XMRefresh-dummy.m */,
+				64B89798D288C1DD4774A7D75B1FC488 /* XMRefresh-prefix.pch */,
+				5BCA616201698D37A71986F340D09721 /* XMRefresh-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/XMRefresh";
+			sourceTree = "<group>";
+		};
+		3A74ED9C1FBB05010020C2AB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3A74ED9D1FBB05010020C2AB /* XMRefreshHeader.swift */,
+				3A74ED9E1FBB05010020C2AB /* XMRefreshComponent.swift */,
+				3A74ED9F1FBB05010020C2AB /* XMRefreshAutoFooter.swift */,
+				3A74EDA01FBB05010020C2AB /* XMRefreshFooter.swift */,
+				3A74EDA11FBB05010020C2AB /* XMRefreshBackFooter.swift */,
+			);
+			name = Base;
+			path = XMRefresh/Classes/Base;
+			sourceTree = "<group>";
+		};
+		3A74EDA21FBB05010020C2AB /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDA31FBB05010020C2AB /* Footer */,
+				3A74EDAC1FBB05010020C2AB /* Header */,
+			);
+			name = Custom;
+			path = XMRefresh/Classes/Custom;
+			sourceTree = "<group>";
+		};
+		3A74EDA31FBB05010020C2AB /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDA41FBB05010020C2AB /* Back */,
+				3A74EDA81FBB05010020C2AB /* Auto */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		3A74EDA41FBB05010020C2AB /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDA51FBB05010020C2AB /* XMRefreshBackStateFooter.swift */,
+				3A74EDA61FBB05010020C2AB /* XMRefreshBackGifFooter.swift */,
+				3A74EDA71FBB05010020C2AB /* XMRefreshBackNormalFooter.swift */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		3A74EDA81FBB05010020C2AB /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDA91FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift */,
+				3A74EDAA1FBB05010020C2AB /* XMRefreshAutoStateFooter.swift */,
+				3A74EDAB1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		3A74EDAC1FBB05010020C2AB /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				3A74EDAD1FBB05010020C2AB /* XMRefreshGifHeader.swift */,
+				3A74EDAE1FBB05010020C2AB /* XMRefreshStateHeader.swift */,
+				3A74EDAF1FBB05010020C2AB /* XMRefreshNormalHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		3F38C5F4C34FE7797E64A549BA1FCF2B /* Pods-XMRefresh_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7FFAA96A43942CCA34F8C2C99F921249 /* Info.plist */,
+				78A0C2F14DCF981705E70A71B6BD6EF3 /* Pods-XMRefresh_Tests.modulemap */,
+				B58087920B712112758BDFC0C865712A /* Pods-XMRefresh_Tests-acknowledgements.markdown */,
+				67794FC0B6CC6E33E1C9811FB2993131 /* Pods-XMRefresh_Tests-acknowledgements.plist */,
+				27CF6FF83D8D2C7AC9C4341BEAACE209 /* Pods-XMRefresh_Tests-dummy.m */,
+				B5E5991E2E3742545C18E7AED936E53D /* Pods-XMRefresh_Tests-frameworks.sh */,
+				6533E2D36F1F824AFDF58F978EDC0BF3 /* Pods-XMRefresh_Tests-resources.sh */,
+				20E22D4BD610AB018314742419D1D02D /* Pods-XMRefresh_Tests-umbrella.h */,
+				DCB965D75BAF179A432E07894A269BE0 /* Pods-XMRefresh_Tests.debug.xcconfig */,
+				7CE4DD802BEE4B10F9FA19401B0789CD /* Pods-XMRefresh_Tests.release.xcconfig */,
+			);
+			name = "Pods-XMRefresh_Tests";
+			path = "Target Support Files/Pods-XMRefresh_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				DE498941C831BA54C7617D62F68595D9 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B8559FE89C816B7CD571269146D1C3AA /* Products */,
+				A204F46A4EDD733719473020BF11063F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A204F46A4EDD733719473020BF11063F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFEF1B9C901371BB5561D0467E1D3871 /* Pods-XMRefresh_Example */,
+				3F38C5F4C34FE7797E64A549BA1FCF2B /* Pods-XMRefresh_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B8559FE89C816B7CD571269146D1C3AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				923625BA20CB88EABAE95B86FB0CF5C7 /* Pods_XMRefresh_Example.framework */,
+				DDB7C5C9D12425FC149C26383CC24091 /* Pods_XMRefresh_Tests.framework */,
+				E36DE5CB0BDEBADCC20B340F117D47B7 /* XMRefresh.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFEF1B9C901371BB5561D0467E1D3871 /* Pods-XMRefresh_Example */ = {
+			isa = PBXGroup;
+			children = (
+				43E5FC219273667F7064AA579FFF7DDF /* Info.plist */,
+				F899FB0AD559517E341CE548A41771AC /* Pods-XMRefresh_Example.modulemap */,
+				C31046A607C7BA56AD11A86E7BC74446 /* Pods-XMRefresh_Example-acknowledgements.markdown */,
+				56F58C9446BD6508B4234BCF42243A8D /* Pods-XMRefresh_Example-acknowledgements.plist */,
+				5F75044219EBE5CD0A35F0B008713730 /* Pods-XMRefresh_Example-dummy.m */,
+				E42B2EF1031928C615A31139C34C5FE2 /* Pods-XMRefresh_Example-frameworks.sh */,
+				628CA1DEC6C66E8AAE4F0C992B50AB39 /* Pods-XMRefresh_Example-resources.sh */,
+				5F23F3858E46DCFFAFF0B2623C3CB784 /* Pods-XMRefresh_Example-umbrella.h */,
+				76F2ACB7A0E94384F0588DA5EBDB4C8F /* Pods-XMRefresh_Example.debug.xcconfig */,
+				CCD92A26957177585641ACCF1ECB96FB /* Pods-XMRefresh_Example.release.xcconfig */,
+			);
+			name = "Pods-XMRefresh_Example";
+			path = "Target Support Files/Pods-XMRefresh_Example";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DE498941C831BA54C7617D62F68595D9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CCBB739F228F27BDFD7F3429D01F344 /* XMRefresh */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53F7B6D62F175BC68053B68C32BC3FF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08E06D50AA91A046EBCA23318E654248 /* Pods-XMRefresh_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBAA66D42CB717A46139069214F01FDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD1E41F396BC80FE6A3D589D3F69098 /* XMRefresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6496B6C909CDCB26828EB83520A125 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CE8D4F026AC472BDA81F137769E4936 /* Pods-XMRefresh_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		39B38AD1B1EAC0F6D5FF32AFFC9B87C8 /* Pods-XMRefresh_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09235B8D25C46670F323CDD54C7AF926 /* Build configuration list for PBXNativeTarget "Pods-XMRefresh_Example" */;
+			buildPhases = (
+				911EF3A16CDAB93FE51AF04F6A6A7B9C /* Sources */,
+				96199F42C60CE77E689C6DFF6A839C43 /* Frameworks */,
+				53F7B6D62F175BC68053B68C32BC3FF0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2516BB57A54CED94FAD137CBE123A714 /* PBXTargetDependency */,
+			);
+			name = "Pods-XMRefresh_Example";
+			productName = "Pods-XMRefresh_Example";
+			productReference = 923625BA20CB88EABAE95B86FB0CF5C7 /* Pods_XMRefresh_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		598E6D9B4FA613E9D83112B956F11257 /* Pods-XMRefresh_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E272C62C21DC12CA15CA5AC4CB05794 /* Build configuration list for PBXNativeTarget "Pods-XMRefresh_Tests" */;
+			buildPhases = (
+				988DA675E2D09B05EC5A2389CD3F2465 /* Sources */,
+				72663D603B7382507F6135A49409B2E2 /* Frameworks */,
+				ED6496B6C909CDCB26828EB83520A125 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-XMRefresh_Tests";
+			productName = "Pods-XMRefresh_Tests";
+			productReference = DDB7C5C9D12425FC149C26383CC24091 /* Pods_XMRefresh_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D023FF3F50B41C861F257F120B890C54 /* XMRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CA69771BC3E006D708E70649D6DD988 /* Build configuration list for PBXNativeTarget "XMRefresh" */;
+			buildPhases = (
+				DF9690C8223E3F657345D275BC5AC233 /* Sources */,
+				3AC7B9A92423E1B3C8B80478BBFB1247 /* Frameworks */,
+				EBAA66D42CB717A46139069214F01FDE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMRefresh;
+			productName = XMRefresh;
+			productReference = E36DE5CB0BDEBADCC20B340F117D47B7 /* XMRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0910;
+				TargetAttributes = {
+					39B38AD1B1EAC0F6D5FF32AFFC9B87C8 = {
+						LastSwiftMigration = 0910;
+					};
+					D023FF3F50B41C861F257F120B890C54 = {
+						LastSwiftMigration = 0910;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B8559FE89C816B7CD571269146D1C3AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39B38AD1B1EAC0F6D5FF32AFFC9B87C8 /* Pods-XMRefresh_Example */,
+				598E6D9B4FA613E9D83112B956F11257 /* Pods-XMRefresh_Tests */,
+				D023FF3F50B41C861F257F120B890C54 /* XMRefresh */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		911EF3A16CDAB93FE51AF04F6A6A7B9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A74EDB91FBB05010020C2AB /* XMRefreshAutoFooter.swift in Sources */,
+				3A74EDB51FBB05010020C2AB /* XMRefreshHeader.swift in Sources */,
+				3A74EDCD1FBB05010020C2AB /* XMRefreshStateHeader.swift in Sources */,
+				3A74EDD31FBB05010020C2AB /* Bundle_Refresh.swift in Sources */,
+				3A74EDD11FBB05010020C2AB /* XMRefreshConst.swift in Sources */,
+				3A74EDB31FBB05010020C2AB /* UIView_Refresh.swift in Sources */,
+				3A74EDD51FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */,
+				3A74EDC31FBB05010020C2AB /* XMRefreshBackNormalFooter.swift in Sources */,
+				3A74EDC11FBB05010020C2AB /* XMRefreshBackGifFooter.swift in Sources */,
+				3A74EDBB1FBB05010020C2AB /* XMRefreshFooter.swift in Sources */,
+				3A74EDC71FBB05010020C2AB /* XMRefreshAutoStateFooter.swift in Sources */,
+				3A74EDB71FBB05010020C2AB /* XMRefreshComponent.swift in Sources */,
+				3A74EDCB1FBB05010020C2AB /* XMRefreshGifHeader.swift in Sources */,
+				3A74EDC91FBB05010020C2AB /* XMRefreshAutoGifFooter.swift in Sources */,
+				1A65FFEB989B91C6B151B460E76990A3 /* Pods-XMRefresh_Example-dummy.m in Sources */,
+				3A74EDCF1FBB05010020C2AB /* XMRefreshNormalHeader.swift in Sources */,
+				3A74EDC51FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift in Sources */,
+				3A74EDBF1FBB05010020C2AB /* XMRefreshBackStateFooter.swift in Sources */,
+				3A74EDBD1FBB05010020C2AB /* XMRefreshBackFooter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		988DA675E2D09B05EC5A2389CD3F2465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77943C0654235FBF6B4C9AE7B7528EBB /* Pods-XMRefresh_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF9690C8223E3F657345D275BC5AC233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A74EDBA1FBB05010020C2AB /* XMRefreshAutoFooter.swift in Sources */,
+				3A74EDB61FBB05010020C2AB /* XMRefreshHeader.swift in Sources */,
+				3A74EDCE1FBB05010020C2AB /* XMRefreshStateHeader.swift in Sources */,
+				3A74EDD41FBB05010020C2AB /* Bundle_Refresh.swift in Sources */,
+				3A74EDD21FBB05010020C2AB /* XMRefreshConst.swift in Sources */,
+				3A74EDB41FBB05010020C2AB /* UIView_Refresh.swift in Sources */,
+				3A74EDD61FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */,
+				3A74EDC41FBB05010020C2AB /* XMRefreshBackNormalFooter.swift in Sources */,
+				3A74EDC21FBB05010020C2AB /* XMRefreshBackGifFooter.swift in Sources */,
+				3A74EDBC1FBB05010020C2AB /* XMRefreshFooter.swift in Sources */,
+				3A74EDC81FBB05010020C2AB /* XMRefreshAutoStateFooter.swift in Sources */,
+				3A74EDB81FBB05010020C2AB /* XMRefreshComponent.swift in Sources */,
+				3A74EDCC1FBB05010020C2AB /* XMRefreshGifHeader.swift in Sources */,
+				3A74EDCA1FBB05010020C2AB /* XMRefreshAutoGifFooter.swift in Sources */,
+				EA7A390C65A7067E6FA19AA97965362C /* XMRefresh-dummy.m in Sources */,
+				3A74EDD01FBB05010020C2AB /* XMRefreshNormalHeader.swift in Sources */,
+				3A74EDC61FBB05010020C2AB /* XMRefreshAutoNormalFooter.swift in Sources */,
+				3A74EDC01FBB05010020C2AB /* XMRefreshBackStateFooter.swift in Sources */,
+				3A74EDBE1FBB05010020C2AB /* XMRefreshBackFooter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2516BB57A54CED94FAD137CBE123A714 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMRefresh;
+			target = D023FF3F50B41C861F257F120B890C54 /* XMRefresh */;
+			targetProxy = B3E4F204F03518505E8311BB772CEFC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CDDB773722E4F0993BB4C9B469D220A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F2ACB7A0E94384F0588DA5EBDB4C8F /* Pods-XMRefresh_Example.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XMRefresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XMRefresh_Example/Pods-XMRefresh_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_XMRefresh_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2F81DC2939E5F1BB789CDA42D3367AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD92A26957177585641ACCF1ECB96FB /* Pods-XMRefresh_Example.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XMRefresh_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XMRefresh_Example/Pods-XMRefresh_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_XMRefresh_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		78CD70A77DA01020C3B6D925DF5BC74A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE4DD802BEE4B10F9FA19401B0789CD /* Pods-XMRefresh_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XMRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XMRefresh_Tests/Pods-XMRefresh_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_XMRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A0ADCE35BCEFEF2AD07503357A65B499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB965D75BAF179A432E07894A269BE0 /* Pods-XMRefresh_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-XMRefresh_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-XMRefresh_Tests/Pods-XMRefresh_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_XMRefresh_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B8ED061124707E341FC6C586287B4B6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF4917AAA0DD86360F6199A9D34AE884 /* XMRefresh.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XMRefresh/XMRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XMRefresh/XMRefresh.modulemap";
+				PRODUCT_NAME = XMRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC749E152AC443E46F3D9F068D650309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF4917AAA0DD86360F6199A9D34AE884 /* XMRefresh.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XMRefresh/XMRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XMRefresh/XMRefresh.modulemap";
+				PRODUCT_NAME = XMRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09235B8D25C46670F323CDD54C7AF926 /* Build configuration list for PBXNativeTarget "Pods-XMRefresh_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CDDB773722E4F0993BB4C9B469D220A /* Debug */,
+				2F81DC2939E5F1BB789CDA42D3367AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E272C62C21DC12CA15CA5AC4CB05794 /* Build configuration list for PBXNativeTarget "Pods-XMRefresh_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0ADCE35BCEFEF2AD07503357A65B499 /* Debug */,
+				78CD70A77DA01020C3B6D925DF5BC74A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
+				731DC216E1A58545B559F6E0A2418060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CA69771BC3E006D708E70649D6DD988 /* Build configuration list for PBXNativeTarget "XMRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8ED061124707E341FC6C586287B4B6E /* Debug */,
+				FC749E152AC443E46F3D9F068D650309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module XMRefresh {
+  umbrella header "XMRefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}
