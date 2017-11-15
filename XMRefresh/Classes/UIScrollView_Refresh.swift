@@ -137,8 +137,23 @@ public extension UIScrollView {
         get {
             return objc_getAssociatedObject(self, UIScrollView.RuntimeKey.footer!) as? XMRefreshFooter
         }
-
     }
+    public var xm_totalDataCount: Int {
+        var totalCount = 0
+        if self is UITableView {
+            let tableview = self as! UITableView
+            for i in 0 ..< tableview.numberOfSections {
+                totalCount = totalCount + tableview.numberOfRows(inSection: i)
+            }
+        } else if self is UICollectionView {
+            let collectionView = self as! UICollectionView
+            for i in 0 ..< collectionView.numberOfSections {
+                totalCount = totalCount + collectionView.numberOfItems(inSection: i)
+            }
+        }
+        return totalCount
+    }
+
 }
 
 //fileprivate extension UIScrollView {
@@ -154,21 +169,6 @@ public extension UIScrollView {
 //    }
 //}
 
-//    public var mj_totalDataCount: Int {
-//        var totalCount = 0
-//        if self is UITableView {
-//            let tableview = self as! UITableView
-//            for i in 0 ..< tableview.numberOfSections {
-//                totalCount = totalCount + tableview.numberOfRows(inSection: i)
-//            }
-//        } else if self is UICollectionView {
-//            let collectionView = self as! UICollectionView
-//            for i in 0 ..< collectionView.numberOfSections {
-//                totalCount = totalCount + collectionView.numberOfItems(inSection: i)
-//            }
-//        }
-//        return totalCount
-//    }
 //    public var xm_reloadData: ((Int) -> Void)? {
 //        set {
 //            willChangeValue(forKey: "xm_reloadData")

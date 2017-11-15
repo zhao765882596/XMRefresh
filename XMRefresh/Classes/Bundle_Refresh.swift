@@ -25,7 +25,7 @@ extension Bundle {
     class func xm_arrowImage() -> UIImage? {
         return arrowImage
     }
-    class func xm_localizedString(key: String, value: String)  -> String {
+    class func xm_localizedString(key: String, value: String? = nil)  -> String {
         if localizedBundle == nil {
             var language = Locale.preferredLanguages.first
             if language?.range(of: "zh-Hans") != nil {

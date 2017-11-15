@@ -31,49 +31,42 @@ public class XMRefreshHeader: XMRefreshComponent {
         super.placeSubviews()
         xm_y = 0 - xm_height - ignoredScrollViewContentInsetTop
     }
-    public override var state: XMRefreshState {
-        set {
-            let oldState = super.state
-
-            if newValue == oldState {
+    public override func set(oldState: XMRefreshState) {
+        if state == oldState {
+            return
+        }
+        super.set(oldState: oldState)
+        if state == .idle {
+            if oldState != .refreshing {
                 return
             }
-            super.state = newValue
-            if newValue == .idle {
-                if oldState != .refreshing {
-                    return
+            UserDefaults.standard.set(Date(), forKey: lastUpdatedTimeKey)
+            UserDefaults.standard.synchronize()
+            UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
+                self.scrollView?.xm_insetT =  self.scrollView?.xm_insetT ?? 0.0 + self.insetTDelta
+                if self.isAutomaticallyChangeAlpha {
+                    self.alpha = 0.8
                 }
-                UserDefaults.standard.set(Date(), forKey: lastUpdatedTimeKey)
-                UserDefaults.standard.synchronize()
+            }, completion: { (isFinished) in
+                self.pullingPercent = 0.0
+                if self.endRefreshingCompletion != nil {
+                    self.endRefreshingCompletion!()
+                }
+            })
+        } else if state == .refreshing {
+            DispatchQueue.main.async {
                 UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
-                    self.scrollView?.xm_insetT =  self.scrollView?.xm_insetT ?? 0.0 + self.insetTDelta
-                    if self.isAutomaticallyChangeAlpha {
-                        self.alpha = 0.8
-                    }
+                    let top = self.scrollViewOriginalInset.top  + self.xm_height;
+                    // 增加滚动区域top
+                    self.scrollView?.xm_insetT = top;
+                    // 设置滚动位置
+                    var offset = self.scrollView?.contentOffset ?? CGPoint.zero
+                    offset.y = offset.y - top;
+                    self.scrollView?.setContentOffset(offset, animated: false)
                 }, completion: { (isFinished) in
-                    self.pullingPercent = 0.0
-                    if self.endRefreshingCompletion != nil {
-                        self.endRefreshingCompletion!()
-                    }
+                    self.executeRefreshingCallback()
                 })
-            } else if newValue == .refreshing {
-                DispatchQueue.main.async {
-                    UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
-                        let top = self.scrollViewOriginalInset.top  + self.xm_height;
-                        // 增加滚动区域top
-                        self.scrollView?.xm_insetT = top;
-                        // 设置滚动位置
-                        var offset = self.scrollView?.contentOffset ?? CGPoint.zero
-                        offset.y = offset.y - top;
-                        self.scrollView?.setContentOffset(offset, animated: false)
-                    }, completion: { (isFinished) in
-                        self.executeRefreshingCallback()
-                    })
-                }
             }
-        }
-        get {
-            return super.state
         }
     }
     public override func scrollViewContentOffsetDidChange(Change: Dictionary<AnyHashable, Any>?) {

@@ -68,30 +68,24 @@ public class XMRefreshAutoFooter: XMRefreshFooter {
             }
         }
     }
-    public override var state: XMRefreshState {
-        set {
-            let oldState = super.state
-
-            if newValue == oldState {
-                return
-            }
-            super.state = newValue
-            if newValue == .refreshing {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
-                    self.executeRefreshingCallback()
-                })
-            } else if newValue == .noMoreData || state == .idle {
-                if oldState == .refreshing {
-                    if self.endRefreshingCompletion != nil {
-                        self.endRefreshingCompletion!()
-                    }
+    public override func set(oldState: XMRefreshState) {
+        if state == oldState {
+            return
+        }
+        super.set(oldState: oldState)
+        if state == .refreshing {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                self.executeRefreshingCallback()
+            })
+        } else if state == .noMoreData || state == .idle {
+            if oldState == .refreshing {
+                if self.endRefreshingCompletion != nil {
+                    self.endRefreshingCompletion!()
                 }
             }
+        }
 
-        }
-        get {
-            return super.state
-        }
+
     }
     public override var isHidden: Bool {
         set {

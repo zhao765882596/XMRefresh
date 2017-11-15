@@ -17,7 +17,7 @@ let XMRefreshLabelLeftInset: CGFloat = 25
 let XMRefreshHeaderHeight: CGFloat = 54
 let XMRefreshFooterHeight: CGFloat = 44
 let XMRefreshFastAnimationDuration: TimeInterval = 0.25
-let XMRefreshSlowAnimationDuration: CGFloat = 0.4
+let XMRefreshSlowAnimationDuration: TimeInterval = 0.4
 
 let XMRefreshKeyPathContentOffset = "contentOffset"
 let XMRefreshKeyPathContentInset = "contentInset"
