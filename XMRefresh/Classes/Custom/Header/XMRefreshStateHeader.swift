@@ -22,7 +22,7 @@ public class XMRefreshStateHeader: XMRefreshHeader {
         return _lastUpdatedTimeText
     }
 
-    public var labelLeftInset: CGFloat = 0.0
+    public var labelLeftInset: CGFloat = XMRefreshLabelLeftInset
 
     public var stateLabel: UILabel {
         if _stateLabel.superview == nil {
