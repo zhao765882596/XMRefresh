@@ -48,7 +48,7 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
         if loadingView.constraints.count == 0 {
             loadingView.center = arrowCenter
         }
-        arrowView.tintColor = stateLabel.tintColor
+        arrowView.tintColor = stateLabel.textColor
     }
 
     public override func set(oldState: XMRefreshState) {
@@ -58,7 +58,7 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
         super.set(oldState: oldState)
         if state == .idle {
             if oldState == .refreshing {
-                arrowView.transform.rotated(by: CGFloat(-Double.pi))
+                arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(-Double.pi))
                 UIView.animate(withDuration: XMRefreshSlowAnimationDuration, animations: {
                     self.loadingView.alpha = 0.0
                 }, completion: { (finished) in
@@ -70,7 +70,7 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
                 loadingView.stopAnimating()
                 arrowView.isHidden = false
                 UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
-                    self.arrowView.transform.rotated(by: CGFloat(-Double.pi))
+                    self.arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(0.000001 - Double.pi))
                 })
             }
         } else if state == .pulling {

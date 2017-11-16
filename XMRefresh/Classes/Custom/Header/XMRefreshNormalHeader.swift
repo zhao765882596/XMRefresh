@@ -56,7 +56,7 @@ public class XMRefreshNormalHeader: XMRefreshStateHeader {
         if loadingView.constraints.count == 0 {
             loadingView.center = arrowCenter
         }
-        arrowView.tintColor = stateLabel.tintColor
+        arrowView.tintColor = stateLabel.textColor
     }
     public override func set(oldState: XMRefreshState) {
         if state == oldState {
@@ -87,7 +87,7 @@ public class XMRefreshNormalHeader: XMRefreshStateHeader {
             loadingView.stopAnimating()
             arrowView.isHidden = false
             UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
-                self.arrowView.transform.rotated(by: CGFloat(-Double.pi))
+                self.arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(0.000001 - Double.pi))
             })
         } else if state == .refreshing {
             loadingView.alpha = 1.0
