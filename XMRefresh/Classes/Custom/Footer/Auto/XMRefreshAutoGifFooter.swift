@@ -36,6 +36,7 @@ public class XMRefreshAutoGifFooter: XMRefreshAutoStateFooter {
         }
     }
     public override func prepare() {
+        super.prepare()
         labelLeftInset = 20
     }
     public override func placeSubviews() {
