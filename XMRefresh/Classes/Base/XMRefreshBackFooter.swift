@@ -8,16 +8,16 @@
 
 import UIKit
 
-class XMRefreshBackFooter: XMRefreshFooter {
+public class XMRefreshBackFooter: XMRefreshFooter {
     var lastBottomDelta: CGFloat = 0.0
     var lastRefreshCount = 0
 
 
-    override func willMove(toSuperview newSuperview: UIView?) {
+    override public func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         scrollViewContentSizeDidChange(Change: nil)
     }
-    override func scrollViewContentOffsetDidChange(Change: Dictionary<AnyHashable, Any>?) {
+    override public func scrollViewContentOffsetDidChange(Change: Dictionary<AnyHashable, Any>?) {
         super.scrollViewContentOffsetDidChange(Change: Change)
         if state == .refreshing {
             return
@@ -49,7 +49,14 @@ class XMRefreshBackFooter: XMRefreshFooter {
             self.pullingPercent = pullingPercent
         }
     }
-    override func set(oldState: XMRefreshState) {
+    public override func scrollViewContentSizeDidChange(Change: Dictionary<AnyHashable, Any>?) {
+        super.scrollViewContentSizeDidChange(Change: Change)
+        guard let scroll = scrollView else { return }
+        let contentHeight = scroll.xm_contentH + ignoredScrollViewContentInsetBottom
+        let scrollHeight = scroll.xm_height - scrollViewOriginalInset.top - scrollViewOriginalInset.bottom + ignoredScrollViewContentInsetBottom
+        xm_y = max(contentHeight, scrollHeight)
+    }
+    override public func set(oldState: XMRefreshState) {
         if state == oldState {
             return
         }
@@ -84,7 +91,6 @@ class XMRefreshBackFooter: XMRefreshFooter {
                 scroll.xm_offsetY = self.happenOffsetY() + self.xm_height
             }, completion: { (isFinished) in
                 self.executeRefreshingCallback()
-
             })
         }
 

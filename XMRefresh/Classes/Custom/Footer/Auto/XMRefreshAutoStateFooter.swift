@@ -37,17 +37,17 @@ public class XMRefreshAutoStateFooter: XMRefreshAutoFooter {
     public override func prepare() {
         super.prepare()
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterIdleText), state: .idle)
+        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterPullingText), state: .pulling)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterRefreshingText), state: .refreshing)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterNoMoreDataText), state: .noMoreData)
-        stateLabel.isUserInteractionEnabled =  true
+        stateLabel.isUserInteractionEnabled = true
         stateLabel.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(self.stateLabelClick)))
     }
     public override func placeSubviews() {
         super.placeSubviews()
         if stateLabel.constraints.count == 0 {
-            return
+            stateLabel.frame = bounds
         }
-        stateLabel.frame = bounds
     }
     public override func set(oldState: XMRefreshState) {
         if state == oldState {

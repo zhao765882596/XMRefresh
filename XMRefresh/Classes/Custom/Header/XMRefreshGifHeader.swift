@@ -56,7 +56,7 @@ public class XMRefreshGifHeader: XMRefreshStateHeader {
     }
     public override func placeSubviews() {
         super.placeSubviews()
-        if gifView.constraints.count == 0 {
+        if gifView.constraints.count > 0 {
             return
         }
         gifView.frame = bounds

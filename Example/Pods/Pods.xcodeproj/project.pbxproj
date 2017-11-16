@@ -46,6 +46,7 @@
 		3A74EDD41FBB05010020C2AB /* Bundle_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */; };
 		3A74EDD51FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */; };
 		3A74EDD61FBB05010020C2AB /* UIScrollView_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */; };
+		3A8FD5761FBD673B0039A63F /* XMRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A1B30DD1FBD623E0014386B /* XMRefresh.bundle */; };
 		5AD1E41F396BC80FE6A3D589D3F69098 /* XMRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCA616201698D37A71986F340D09721 /* XMRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77943C0654235FBF6B4C9AE7B7528EBB /* Pods-XMRefresh_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CF6FF83D8D2C7AC9C4341BEAACE209 /* Pods-XMRefresh_Tests-dummy.m */; };
 		7CE8D4F026AC472BDA81F137769E4936 /* Pods-XMRefresh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E22D4BD610AB018314742419D1D02D /* Pods-XMRefresh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		20E22D4BD610AB018314742419D1D02D /* Pods-XMRefresh_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMRefresh_Tests-umbrella.h"; sourceTree = "<group>"; };
 		27CF6FF83D8D2C7AC9C4341BEAACE209 /* Pods-XMRefresh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMRefresh_Tests-dummy.m"; sourceTree = "<group>"; };
+		3A1B30DD1FBD623E0014386B /* XMRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = XMRefresh.bundle; path = XMRefresh/Assets/XMRefresh.bundle; sourceTree = "<group>"; };
 		3A74ED9B1FBB05010020C2AB /* UIView_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView_Refresh.swift; path = XMRefresh/Classes/UIView_Refresh.swift; sourceTree = "<group>"; };
 		3A74ED9D1FBB05010020C2AB /* XMRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshHeader.swift; sourceTree = "<group>"; };
 		3A74ED9E1FBB05010020C2AB /* XMRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMRefreshComponent.swift; sourceTree = "<group>"; };
@@ -85,7 +87,6 @@
 		3A74EDB01FBB05010020C2AB /* XMRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMRefreshConst.swift; path = XMRefresh/Classes/XMRefreshConst.swift; sourceTree = "<group>"; };
 		3A74EDB11FBB05010020C2AB /* Bundle_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bundle_Refresh.swift; path = XMRefresh/Classes/Bundle_Refresh.swift; sourceTree = "<group>"; };
 		3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIScrollView_Refresh.swift; path = XMRefresh/Classes/UIScrollView_Refresh.swift; sourceTree = "<group>"; };
-		3A74EDD71FBB05690020C2AB /* XMRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = XMRefresh.bundle; path = ../../../../XMRefresh/Assets/XMRefresh.bundle; sourceTree = "<group>"; };
 		43E5FC219273667F7064AA579FFF7DDF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56F58C9446BD6508B4234BCF42243A8D /* Pods-XMRefresh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XMRefresh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BCA616201698D37A71986F340D09721 /* XMRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMRefresh-umbrella.h"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		1CCBB739F228F27BDFD7F3429D01F344 /* XMRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				3A1B30DD1FBD623E0014386B /* XMRefresh.bundle */,
 				3A74ED9C1FBB05010020C2AB /* Base */,
 				3A74EDA21FBB05010020C2AB /* Custom */,
 				3A74EDB21FBB05010020C2AB /* UIScrollView_Refresh.swift */,
@@ -163,7 +165,6 @@
 		2E96706EBB32967BE8035647041052FE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3A74EDD71FBB05690020C2AB /* XMRefresh.bundle */,
 				9F3F95320B9567900D72008E94FCC03F /* Info.plist */,
 				BEA6D5F5C1D1865AEA385AEA2326BD85 /* XMRefresh.modulemap */,
 				DF4917AAA0DD86360F6199A9D34AE884 /* XMRefresh.xcconfig */,
@@ -399,6 +400,7 @@
 				DF9690C8223E3F657345D275BC5AC233 /* Sources */,
 				3AC7B9A92423E1B3C8B80478BBFB1247 /* Frameworks */,
 				EBAA66D42CB717A46139069214F01FDE /* Headers */,
+				3A8FD5751FBD672B0039A63F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -444,6 +446,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A8FD5751FBD672B0039A63F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8FD5761FBD673B0039A63F /* XMRefresh.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		911EF3A16CDAB93FE51AF04F6A6A7B9C /* Sources */ = {
@@ -639,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -696,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;

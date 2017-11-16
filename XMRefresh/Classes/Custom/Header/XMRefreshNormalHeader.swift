@@ -44,7 +44,7 @@ public class XMRefreshNormalHeader: XMRefreshStateHeader {
                 timeWidth = lastUpdatedTimeLabel.xm_textWith()
             }
             let textWidh = max(stateWidth, timeWidth)
-            arrowCenterX = arrowCenterX - textWidh * 0.5 + labelLeftInset
+            arrowCenterX = arrowCenterX - textWidh * 0.5 - labelLeftInset
         }
         let arrowCenterY = xm_height * 0.5
         let arrowCenter = CGPoint.init(x: arrowCenterX, y: arrowCenterY)

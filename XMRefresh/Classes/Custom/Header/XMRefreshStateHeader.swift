@@ -81,7 +81,6 @@ public class XMRefreshStateHeader: XMRefreshHeader {
     }
     public override func prepare() {
         super.prepare()
-        labelLeftInset = XMRefreshLabelLeftInset
         set(title: Bundle.xm_localizedString(key: XMRefreshHeaderIdleText), state: .idle)
         set(title: Bundle.xm_localizedString(key: XMRefreshHeaderPullingText), state: .pulling)
         set(title: Bundle.xm_localizedString(key: XMRefreshHeaderRefreshingText), state: .refreshing)

@@ -29,14 +29,13 @@ public class XMRefreshAutoNormalFooter: XMRefreshAutoStateFooter {
     public override func placeSubviews() {
         super.placeSubviews()
         if loadingView.constraints.count == 0 {
-            return
+            var loadingCenterX = xm_width * 0.5
+            if isRefreshingTitleHidden == false {
+                loadingCenterX = loadingCenterX - stateLabel.xm_textWith() * 0.5 - labelLeftInset
+            }
+            let loadingCenterY = xm_height * 0.5
+            loadingView.center = CGPoint.init(x: loadingCenterX, y: loadingCenterY)
         }
-        var loadingCenterX = xm_width * 0.5
-        if isRefreshingTitleHidden == false {
-            loadingCenterX = loadingCenterX - stateLabel.xm_textWith() * 0.5 + labelLeftInset
-        }
-        let loadingCenterY = xm_height * 0.5
-        loadingView.center = CGPoint.init(x: loadingCenterX, y: loadingCenterY)
     }
     public override func set(oldState: XMRefreshState) {
         if state == oldState {

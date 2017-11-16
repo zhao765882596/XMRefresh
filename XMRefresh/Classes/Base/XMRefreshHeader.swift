@@ -36,6 +36,7 @@ public class XMRefreshHeader: XMRefreshComponent {
             return
         }
         super.set(oldState: oldState)
+        guard let scroll = self.scrollView else { return }
         if state == .idle {
             if oldState != .refreshing {
                 return
@@ -43,7 +44,7 @@ public class XMRefreshHeader: XMRefreshComponent {
             UserDefaults.standard.set(Date(), forKey: lastUpdatedTimeKey)
             UserDefaults.standard.synchronize()
             UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
-                self.scrollView?.xm_insetT =  self.scrollView?.xm_insetT ?? 0.0 + self.insetTDelta
+                scroll.xm_insetT = scroll.xm_insetT + self.insetTDelta
                 if self.isAutomaticallyChangeAlpha {
                     self.alpha = 0.8
                 }
@@ -58,11 +59,11 @@ public class XMRefreshHeader: XMRefreshComponent {
                 UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
                     let top = self.scrollViewOriginalInset.top  + self.xm_height;
                     // 增加滚动区域top
-                    self.scrollView?.xm_insetT = top;
+                    scroll.xm_insetT = top;
                     // 设置滚动位置
-                    var offset = self.scrollView?.contentOffset ?? CGPoint.zero
-                    offset.y = offset.y - top;
-                    self.scrollView?.setContentOffset(offset, animated: false)
+                    var offset = scroll.contentOffset
+                    offset.y = -top;
+                    scroll.setContentOffset(offset, animated: false)
                 }, completion: { (isFinished) in
                     self.executeRefreshingCallback()
                 })
@@ -77,8 +78,9 @@ public class XMRefreshHeader: XMRefreshComponent {
                 return
             }
             var insetT = (-scroll.xm_offsetY > scrollViewOriginalInset.top) ? -scroll.xm_offsetY : scrollViewOriginalInset.top
-            insetT = insetT > xm_height + scrollViewOriginalInset.top ? xm_height + scrollViewOriginalInset.top : insetT
+            insetT = insetT > (xm_height + scrollViewOriginalInset.top) ? xm_height + scrollViewOriginalInset.top : insetT
             scroll.xm_insetT = insetT
+            insetTDelta = scrollViewOriginalInset.top - insetT
             return
         }
         scrollViewOriginalInset = scroll.xm_inset

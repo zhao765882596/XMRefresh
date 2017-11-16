@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XMRefreshBackStateFooter: XMRefreshBackFooter {
+public class XMRefreshBackStateFooter: XMRefreshBackFooter {
 
     private var _stateLabel = UILabel.xm_label
     private var stateTitles: Dictionary <XMRefreshState,String> = [:]
@@ -38,6 +38,7 @@ class XMRefreshBackStateFooter: XMRefreshBackFooter {
     public override func prepare() {
         super.prepare()
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterIdleText), state: .idle)
+        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterPullingText), state: .pulling)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterRefreshingText), state: .refreshing)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterNoMoreDataText), state: .noMoreData)
         stateLabel.isUserInteractionEnabled =  true
@@ -46,9 +47,8 @@ class XMRefreshBackStateFooter: XMRefreshBackFooter {
     public override func placeSubviews() {
         super.placeSubviews()
         if stateLabel.constraints.count == 0 {
-            return
+            stateLabel.frame = bounds
         }
-        stateLabel.frame = bounds
     }
     public override func set(oldState: XMRefreshState) {
         if state == oldState {

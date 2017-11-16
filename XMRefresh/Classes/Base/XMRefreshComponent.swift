@@ -88,14 +88,15 @@ public class XMRefreshComponent: UIView {
 
     private var pan: UIPanGestureRecognizer?
 
-    init(refreshing: (() -> Void)?) {
+    public init(refreshing: (() -> Void)?) {
         super.init(frame: CGRect.zero)
         self.refreshing = refreshing
+        prepare()
     }
-    init(target: AnyObject?, action: Selector?) {
+    public init(target: AnyObject?, action: Selector?) {
         super.init(frame: CGRect.zero)
         setRefreshing(target: target, action: action)
-
+        prepare()
     }
 //    public override init(frame: CGRect) {
 //        super.init(frame: frame)
@@ -114,7 +115,7 @@ public class XMRefreshComponent: UIView {
         guard let scroll = newSuperview as? UIScrollView else { return }
 
         xm_width = scroll.xm_width
-        xm_x = 0.0 - (scrollView?.xm_insetL ?? 0)
+        xm_x = 0.0 - scroll.xm_insetL
         scrollView = scroll
         scrollView?.alwaysBounceVertical = true
         scrollViewOriginalInset = scrollView?.xm_inset ?? UIEdgeInsets()

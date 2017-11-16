@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XMRefreshBackGifFooter: XMRefreshBackStateFooter {
+public class XMRefreshBackGifFooter: XMRefreshBackStateFooter {
 
     private var _gifView = UIImageView()
     private var stateImages: Dictionary <XMRefreshState,Array<UIImage>> = [:]
@@ -42,7 +42,7 @@ class XMRefreshBackGifFooter: XMRefreshBackStateFooter {
     }
     public override func placeSubviews() {
         super.placeSubviews()
-        if gifView.constraints.count == 0 {
+        if gifView.constraints.count > 0 {
             return
         }
         gifView.frame = bounds

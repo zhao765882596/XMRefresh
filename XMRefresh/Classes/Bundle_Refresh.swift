@@ -15,7 +15,6 @@ extension Bundle {
         if _refreshBundle == nil {
             let frameworkBundle = Bundle.init(for: XMRefreshComponent.classForCoder())
             _refreshBundle = Bundle.init(path: frameworkBundle.path(forResource: "XMRefresh", ofType: "bundle") ?? "")
-//            let bundle = Bundle.init(path: ResourcesBundle?.path(forResource: "XImagePickerController", ofType: "bundle") ?? "")
         }
         return _refreshBundle ?? main
     }
