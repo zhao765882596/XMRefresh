@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XMRefresh'
-  s.version          = '0.3'
+  s.version          = '0.4'
   s.summary          = 'MJRefresh Swift imitate.'
 
 # This description is used to generate tags and improve search results.
@@ -31,10 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XMRefresh/Classes/**/*'
-  
-  s.resource_bundles = {
-    'XMRefresh' => 'XMRefresh/Assets/XMRefresh.bundle'
-  }
+  s.resource     = 'XMRefresh/Assets/XMRefresh.bundle'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
