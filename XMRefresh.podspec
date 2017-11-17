@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XMRefresh'
-  s.version          = '0.6'
+  s.version          = '0.7'
   s.summary          = 'MJRefresh Swift imitate.'
 
 # This description is used to generate tags and improve search results.
