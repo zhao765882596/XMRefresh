@@ -52,13 +52,14 @@ public class XMRefreshAutoGifFooter: XMRefreshAutoStateFooter {
             gifView.xm_width = xm_width * 0.5 - labelLeftInset - stateLabel.xm_textWith() * 0.5
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .refreshing {
-            let images = stateImages[state]
+        super.set(newState: newState)
+        if newState == .refreshing {
+            let images = stateImages[newState]
             if images == nil || images?.count == 0 {
                 return
             }
@@ -67,11 +68,11 @@ public class XMRefreshAutoGifFooter: XMRefreshAutoStateFooter {
                 gifView.image = images?.first
             } else {
                 gifView.animationImages = images
-                let duration = stateDurations[state] ?? 0.0 > 0.0 ? stateDurations[state] ?? 0.2 : TimeInterval(images!.count) * 0.1
+                let duration = stateDurations[newState] ?? 0.0 > 0.0 ? stateDurations[newState] ?? 0.2 : TimeInterval(images!.count) * 0.1
                 gifView.animationDuration = duration
                 gifView.startAnimating()
             }
-        } else if state == .noMoreData || state == .idle {
+        } else if newState == .noMoreData || newState == .idle {
             gifView.stopAnimating()
             gifView.isHidden = true
         }

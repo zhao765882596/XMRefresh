@@ -37,12 +37,13 @@ public class XMRefreshStateHeader: XMRefreshHeader {
         stateTitles[state] = title ?? ""
         _stateLabel.text = stateTitles[self.state]
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        _stateLabel.text = stateTitles[self.state]
+        super.set(newState: newState)
+        _stateLabel.text = stateTitles[newState]
         lastUpdatedTimeKey = (lastUpdatedTimeKey.isEmpty ? "" : lastUpdatedTimeKey)
 
     }

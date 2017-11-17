@@ -28,21 +28,12 @@ public class XMRefreshBackStateFooter: XMRefreshBackFooter {
         stateTitles[state] = title ?? ""
         _stateLabel.text = stateTitles[self.state]
     }
-    public var isRefreshingTitleHidden = false
-    
-    @objc func stateLabelClick() {
-        if state == .idle {
-            beginRefreshing()
-        }
-    }
     public override func prepare() {
         super.prepare()
-        set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterIdleText), state: .idle)
+        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterIdleText), state: .idle)
         set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterPullingText), state: .pulling)
-        set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterRefreshingText), state: .refreshing)
-        set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterNoMoreDataText), state: .noMoreData)
-        stateLabel.isUserInteractionEnabled =  true
-        stateLabel.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(self.stateLabelClick)))
+        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterRefreshingText), state: .refreshing)
+        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterNoMoreDataText), state: .noMoreData)
     }
     public override func placeSubviews() {
         super.placeSubviews()
@@ -50,16 +41,13 @@ public class XMRefreshBackStateFooter: XMRefreshBackFooter {
             stateLabel.frame = bounds
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if isRefreshingTitleHidden && state == .refreshing {
-            stateLabel.text = nil
-        } else {
-            stateLabel.text = stateTitles[state]
-        }
+        super.set(newState: newState)
+        stateLabel.text = stateTitles[newState]
     }
 
 

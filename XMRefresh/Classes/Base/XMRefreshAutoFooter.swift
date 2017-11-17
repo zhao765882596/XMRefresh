@@ -68,16 +68,17 @@ public class XMRefreshAutoFooter: XMRefreshFooter {
             }
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .refreshing {
+        super.set(newState: newState)
+        if newState == .refreshing {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
                 self.executeRefreshingCallback()
             })
-        } else if state == .noMoreData || state == .idle {
+        } else if newState == .noMoreData || newState == .idle {
             if oldState == .refreshing {
                 if self.endRefreshingCompletion != nil {
                     self.endRefreshingCompletion!()

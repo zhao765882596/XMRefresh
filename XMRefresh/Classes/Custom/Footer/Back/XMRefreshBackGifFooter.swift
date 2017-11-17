@@ -31,6 +31,7 @@ public class XMRefreshBackGifFooter: XMRefreshBackStateFooter {
         } else {
             stateDurations[state] = duration
         }
+        gifView.stopAnimating()
         let image = images![0]
         if image.size.height > xm_height {
             xm_height = image.size.height
@@ -46,34 +47,37 @@ public class XMRefreshBackGifFooter: XMRefreshBackStateFooter {
             return
         }
         gifView.frame = bounds
-        if isRefreshingTitleHidden {
+        if stateLabel.isHidden {
             gifView.contentMode = .center
         } else {
             gifView.contentMode = .right
             gifView.xm_width = xm_width * 0.5 - labelLeftInset - stateLabel.xm_textWith() * 0.5
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .refreshing {
-            let images = stateImages[state]
+        super.set(newState: newState)
+        if newState == .refreshing || newState == .pulling {
+            let images = stateImages[newState]
             if images == nil || images?.count == 0 {
                 return
             }
             gifView.isHidden = false
+            gifView.stopAnimating()
             if images?.count == 1 {
                 gifView.image = images?.first
             } else {
                 gifView.animationImages = images
-                let duration = stateDurations[state] ?? 0.0 > 0.0 ? stateDurations[state] ?? 0.2 : TimeInterval(images!.count) * 0.1
+                let duration = stateDurations[newState] ?? 0.0 > 0.0 ? stateDurations[newState] ?? 0.2 : TimeInterval(images!.count) * 0.1
                 gifView.animationDuration = duration
                 gifView.startAnimating()
             }
-        } else if state == .noMoreData || state == .idle {
-            gifView.stopAnimating()
+        } else if newState == .idle {
+            gifView.isHidden = false
+        } else if newState == .noMoreData {
             gifView.isHidden = true
         }
     }

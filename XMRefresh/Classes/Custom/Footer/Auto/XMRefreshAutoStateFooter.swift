@@ -37,7 +37,6 @@ public class XMRefreshAutoStateFooter: XMRefreshAutoFooter {
     public override func prepare() {
         super.prepare()
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterIdleText), state: .idle)
-        set(title: Bundle.xm_localizedString(key: XMRefreshBackFooterPullingText), state: .pulling)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterRefreshingText), state: .refreshing)
         set(title: Bundle.xm_localizedString(key: XMRefreshAutoFooterNoMoreDataText), state: .noMoreData)
         stateLabel.isUserInteractionEnabled = true
@@ -49,15 +48,16 @@ public class XMRefreshAutoStateFooter: XMRefreshAutoFooter {
             stateLabel.frame = bounds
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if isRefreshingTitleHidden && state == .refreshing {
+        super.set(newState: newState)
+        if isRefreshingTitleHidden && newState == .refreshing {
             stateLabel.text = nil
         } else {
-            stateLabel.text = stateTitles[state]
+            stateLabel.text = stateTitles[newState]
         }
     }
 

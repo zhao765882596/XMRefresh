@@ -40,7 +40,7 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
         }
         let arrowCenterY = xm_height * 0.5
         let arrowCenter = CGPoint.init(x: arrowCenterX, y: arrowCenterY)
-
+        
         if arrowView.constraints.count == 0 {
             arrowView.xm_size = arrowView.image?.size ?? CGSize.zero
             arrowView.center = arrowCenter
@@ -50,15 +50,16 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
         }
         arrowView.tintColor = stateLabel.textColor
     }
-
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .idle {
+        super.set(newState: newState)
+        if newState == .idle {
             if oldState == .refreshing {
-                arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(-Double.pi))
+                arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(0.000001 - Double.pi))
                 UIView.animate(withDuration: XMRefreshSlowAnimationDuration, animations: {
                     self.loadingView.alpha = 0.0
                 }, completion: { (finished) in
@@ -73,20 +74,21 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
                     self.arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(0.000001 - Double.pi))
                 })
             }
-        } else if state == .pulling {
+        } else if newState == .pulling {
             loadingView.stopAnimating()
             arrowView.isHidden = false
             UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
                 self.arrowView.transform = CGAffineTransform.identity
             })
-        } else if state == .refreshing {
+        } else if newState == .refreshing {
             loadingView.alpha = 1.0
             loadingView.startAnimating()
             arrowView.isHidden = true
-        } else if state == .noMoreData {
+        } else if newState == .noMoreData {
             loadingView.stopAnimating()
             arrowView.isHidden = true
         }
     }
-
+    
 }
+

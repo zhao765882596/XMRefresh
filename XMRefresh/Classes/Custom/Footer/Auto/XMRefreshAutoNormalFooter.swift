@@ -37,14 +37,15 @@ public class XMRefreshAutoNormalFooter: XMRefreshAutoStateFooter {
             loadingView.center = CGPoint.init(x: loadingCenterX, y: loadingCenterY)
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .noMoreData || state == .idle {
+        super.set(newState: newState)
+        if newState == .noMoreData || newState == .idle {
             loadingView.stopAnimating()
-        } else if state == .refreshing {
+        } else if newState == .refreshing {
             loadingView.startAnimating()
         }
     }

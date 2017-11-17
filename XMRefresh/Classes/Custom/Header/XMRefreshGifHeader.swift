@@ -73,12 +73,13 @@ public class XMRefreshGifHeader: XMRefreshStateHeader {
             gifView.xm_width = xm_width * 0.5 - textWidth * 0.5 - labelLeftInset
         }
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
-        if state == .pulling || state == .refreshing {
+        super.set(newState: newState)
+        if newState == .pulling || newState == .refreshing {
             let images = stateImages[state]
             if images == nil || images?.count == 0 {
                 return
@@ -93,7 +94,7 @@ public class XMRefreshGifHeader: XMRefreshStateHeader {
                 gifView.startAnimating()
             }
 
-        } else if state == .idle {
+        } else if newState == .idle {
             gifView.stopAnimating()
         }
         

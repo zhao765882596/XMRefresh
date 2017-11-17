@@ -56,29 +56,32 @@ public class XMRefreshBackFooter: XMRefreshFooter {
         let scrollHeight = scroll.xm_height - scrollViewOriginalInset.top - scrollViewOriginalInset.bottom + ignoredScrollViewContentInsetBottom
         xm_y = max(contentHeight, scrollHeight)
     }
-    override public func set(oldState: XMRefreshState) {
-        if state == oldState {
+    override public func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
+        super.set(newState: newState)
         guard let scroll = scrollView else { return }
-        if state == .noMoreData || state == .idle {
-            UIView.animate(withDuration: XMRefreshSlowAnimationDuration, animations: {
-                scroll.xm_insetB = scroll.xm_insetB - self.lastBottomDelta
-                if self.isAutomaticallyChangeAlpha {
-                    self.alpha = 1.0
-                }
-            }, completion: { (isFinished) in
-                self.pullingPercent = 0.0
-                if self.endRefreshingCompletion != nil {
-                    self.endRefreshingCompletion!()
-                }
-            })
+        if newState == .noMoreData || newState == .idle {
+            if oldState == .refreshing {
+                UIView.animate(withDuration: XMRefreshSlowAnimationDuration, animations: {
+                    scroll.xm_insetB = scroll.xm_insetB - self.lastBottomDelta
+                    if self.isAutomaticallyChangeAlpha {
+                        self.alpha = 1.0
+                    }
+                }, completion: { (isFinished) in
+                    self.pullingPercent = 0.0
+                    if self.endRefreshingCompletion != nil {
+                        self.endRefreshingCompletion!()
+                    }
+                })
+            }
             let deltaH = self.heightForContentBreakView()
-            if oldState == .refreshing && deltaH > 0.0 && scroll.xm_totalDataCount != self.lastRefreshCount {
+            if newState == .refreshing && deltaH > 0.0 && scroll.xm_totalDataCount != self.lastRefreshCount {
                 self.scrollView?.xm_offsetY = scroll.xm_offsetY
             }
-        } else if state == .refreshing {
+        } else if newState == .refreshing {
             lastRefreshCount = scroll.xm_totalDataCount
             UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
                 var bottom = self.xm_height + self.scrollViewOriginalInset.bottom

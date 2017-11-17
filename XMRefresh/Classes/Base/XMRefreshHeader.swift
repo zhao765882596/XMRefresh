@@ -31,13 +31,14 @@ public class XMRefreshHeader: XMRefreshComponent {
         super.placeSubviews()
         xm_y = 0 - xm_height - ignoredScrollViewContentInsetTop
     }
-    public override func set(oldState: XMRefreshState) {
-        if state == oldState {
+    public override func set(newState: XMRefreshState) {
+        let oldState = state
+        if oldState == newState {
             return
         }
-        super.set(oldState: oldState)
+        super.set(newState: newState)
         guard let scroll = self.scrollView else { return }
-        if state == .idle {
+        if newState == .idle {
             if oldState != .refreshing {
                 return
             }
@@ -54,7 +55,7 @@ public class XMRefreshHeader: XMRefreshComponent {
                     self.endRefreshingCompletion!()
                 }
             })
-        } else if state == .refreshing {
+        } else if newState == .refreshing {
             DispatchQueue.main.async {
                 UIView.animate(withDuration: XMRefreshFastAnimationDuration, animations: {
                     let top = self.scrollViewOriginalInset.top  + self.xm_height;
@@ -110,11 +111,12 @@ public class XMRefreshHeader: XMRefreshComponent {
 
 
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
 
 }
+

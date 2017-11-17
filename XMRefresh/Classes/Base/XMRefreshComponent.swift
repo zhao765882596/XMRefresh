@@ -46,18 +46,28 @@ public class XMRefreshComponent: UIView {
     public var isRefreshing: Bool {
         return state == .refreshing || state == .willRefresh
     }
-    /// 刷新状态 
-    public var state:XMRefreshState = .idle {
+    /// 刷新状态
+    private var _state:XMRefreshState = .idle {
         didSet {
             DispatchQueue.main.async {
                 self.setNeedsLayout()
-                self.set(oldState: oldValue)
             }
         }
     }
 
+    public var state:XMRefreshState {
+        set {
+            self.set(newState: newValue)
+        }
+        get {
+            return _state
+        }
+
+    }
+
     ///  刷新状态 一般交给子类内部实现
-    public func set(oldState: XMRefreshState) {
+    public func set(newState: XMRefreshState) {
+        _state = newState
 
     }
 
