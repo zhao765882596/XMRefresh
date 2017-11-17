@@ -14,6 +14,7 @@ public class XMRefreshBackNormalFooter: XMRefreshBackStateFooter {
     public var arrowView: UIImageView {
         if _arrowView.superview == nil {
             _arrowView.image = Bundle.xm_arrowImage()
+            _arrowView.transform = CGAffineTransform.init(rotationAngle: CGFloat(0.000001 - Double.pi))
             addSubview(_arrowView)
         }
         return _arrowView
