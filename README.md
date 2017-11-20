@@ -5,9 +5,25 @@
 [![License](https://img.shields.io/cocoapods/l/XMRefresh.svg?style=flat)](http://cocoapods.org/pods/XMRefresh)
 [![Platform](https://img.shields.io/cocoapods/p/XMRefresh.svg?style=flat)](http://cocoapods.org/pods/XMRefresh)
 
-## Example
+Swift version of [MJRefresh](https://github.com/CoderMJLee/MJRefresh) An easy way to use pull-to-refresh
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+---
+
+## Example
+```Swift
+self.tableView.xm_header = XMRefreshNormalHeader.init(refreshing: { [weak self] in
+DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5, execute: {
+self?.tableView.reloadData()
+self?.tableView.xm_header?.endRefreshing()
+})
+})
+self.tableView.xm_footer = XMRefreshBackNormalFooter.init(refreshing: {
+DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5, execute: { [weak self] in
+self?.tableView.reloadData()
+self?.tableView.xm_footer?.endRefreshing()
+})
+})
+```
 
 ## Requirements
 
@@ -22,7 +38,7 @@ pod 'XMRefresh'
 
 ## Author
 
-ming, xiaoming.zhao@mljr.com
+ming, z4015@qq.com
 
 ## License
 
