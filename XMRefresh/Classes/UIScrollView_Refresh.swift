@@ -106,7 +106,7 @@ public extension UIScrollView {
     struct RuntimeKey {
         static let header = UnsafeRawPointer.init(bitPattern: "xm_header".hashValue)
         static let footer = UnsafeRawPointer.init(bitPattern: "xm_footer".hashValue)
-//        static let reloadData = UnsafeRawPointer.init(bitPattern: "xm_reloadData".hashValue)
+        static let reloadData = UnsafeRawPointer.init(bitPattern: "xm_reloadData".hashValue)
     }
 
     /// 下拉刷新控件
@@ -153,43 +153,37 @@ public extension UIScrollView {
         }
         return totalCount
     }
+    public var xm_reloadDataBlock: ((Int) -> Void)? {
+        set {
+            willChangeValue(forKey: "xm_footer")
+            objc_setAssociatedObject(self, UIScrollView.RuntimeKey.reloadData!, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+            didChangeValue(forKey: "xm_footer")
+        }
+        get {
+            return objc_getAssociatedObject(self, UIScrollView.RuntimeKey.reloadData!) as? ((Int) -> Void)
+        }
+    }
+    func executeReloadDataBlock() {
+        if xm_reloadDataBlock != nil {
+            xm_reloadDataBlock!(xm_totalDataCount)
+        }
+
+    }
 
 }
 
-//fileprivate extension UIScrollView {
-//    class func exchangeInstance(method1: Selector, method2:Selector) {
-//        guard let m1 = class_getInstanceMethod(self, method1) else { return }
-//        guard let m2 = class_getInstanceMethod(self, method2) else { return }
-//        method_exchangeImplementations(m1, m2)
-//    }
-//    class func exchangeClass(method1: Selector, method2:Selector) {
-//        guard let m1 = class_getClassMethod(self, method1) else { return }
-//        guard let m2 = class_getClassMethod(self, method2) else { return }
-//        method_exchangeImplementations(m1, m2)
-//    }
-//}
-
-//    public var xm_reloadData: ((Int) -> Void)? {
-//        set {
-//            willChangeValue(forKey: "xm_reloadData")
-//            objc_setAssociatedObject(self, UIScrollView.RuntimeKey.footer!, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-//            didChangeValue(forKey: "xm_reloadData")
-//        }
-//        get {
-//            return objc_getAssociatedObject(self, UIScrollView.RuntimeKey.reloadData!) as? ((Int) -> Void)
-//        }
-//
-//    }
-
-//extension UITableView {
-//
-//
-//
-//}
-
-
-
-
+extension UIScrollView {
+    class func exchangeInstance(method1: Selector, method2:Selector) {
+        guard let m1 = class_getInstanceMethod(self, method1) else { return }
+        guard let m2 = class_getInstanceMethod(self, method2) else { return }
+        method_exchangeImplementations(m1, m2)
+    }
+    class func exchangeClass(method1: Selector, method2:Selector) {
+        guard let m1 = class_getClassMethod(self, method1) else { return }
+        guard let m2 = class_getClassMethod(self, method2) else { return }
+        method_exchangeImplementations(m1, m2)
+    }
+}
 
 
 

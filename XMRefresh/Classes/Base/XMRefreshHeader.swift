@@ -75,9 +75,9 @@ public class XMRefreshHeader: XMRefreshComponent {
         super.scrollViewContentOffsetDidChange(Change: Change)
         guard let scroll = self.scrollView else { return }
         if state == .refreshing {
-            if self.window == nil {
-                return
-            }
+//            if self.window == nil {
+//                return
+//            }
             var insetT = (-scroll.xm_offsetY > scrollViewOriginalInset.top) ? -scroll.xm_offsetY : scrollViewOriginalInset.top
             insetT = insetT > (xm_height + scrollViewOriginalInset.top) ? xm_height + scrollViewOriginalInset.top : insetT
             scroll.xm_insetT = insetT
